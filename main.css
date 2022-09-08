@@ -1,0 +1,112 @@
+body{
+    background-color:  hsl(30, 38%, 92%);
+    font-size: 14px;
+    font-family: Montserrat,sans-serif;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.card{
+    max-width: 550px;
+    max-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+
+}
+.card img{
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px 30px 0px 15px;
+    
+}
+.product-category{
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: .25rem;
+}
+h1{
+    font-family: Fraunces;
+    font-size: 2rem;
+    line-height: 1.8rem;
+    padding-right: 30px;
+}
+p{
+    margin-top: 0px;
+    color: hsl(228, 12%, 48%);
+}
+.price-block{
+    display: inline-flex;
+    place-items: center;
+    margin-bottom: 20px;
+}
+.main-price{
+    font-family: Fraunces;
+    font-size: 2rem;
+    margin-right: 20px;
+    color:  hsl(158, 36%, 37%);
+}
+.old-price{
+    text-decoration:line-through;
+    color: hsl(228, 12%, 48%);
+}
+button{
+    background-color:hsl(158, 36%, 37%) ;
+    color: hsl(0, 0%, 100%);
+    height: 2.8rem;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+button svg{
+    padding-right: 5px;
+}
+
+button:hover{
+    background-color: hsl(158, 39%, 19%);
+}
+
+@media (max-width: 564px) {
+    body{
+        flex-direction: column;
+    }
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 375px;
+        max-height: max-content;
+        
+    }
+    .card-img{
+        height:auto;
+        margin: 0;
+    }
+    .card img{
+        
+        border-radius: 10px 10px 0px 0px;
+        content:url("./images/image-product-mobile.jpg");
+        height: auto;
+        width:375px;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 0px 30px 20px 30px;
+        
+    }
+}
